@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background circle/disc -->
+  <circle cx="256" cy="256" r="240" fill="#030B1A"/>
+  
+  <!-- Outer glowing rings -->
+  <g fill="none" stroke="#22D3EE" stroke-width="24" stroke-linecap="round">
+    <path d="M120 180 A 180 180 0 0 1 392 180" opacity="0.8"/>
+    <path d="M120 332 A 180 180 0 0 0 392 332" opacity="0.8"/>
+    <path d="M160 140 A 220 220 0 0 1 352 140" stroke-width="12" opacity="0.5"/>
+    <path d="M160 372 A 220 220 0 0 0 352 372" stroke-width="12" opacity="0.5"/>
+  </g>
+
+  <!-- Central Lightning Bolt / Energy Symbol -->
+  <path d="M296 48 L128 288 L232 288 L216 464 L384 224 L280 224 Z" fill="#22D3EE" filter="drop-shadow(0 0 8px #22D3EE)"/>
+
+  <!-- Circuit nodes -->
+  <g fill="#22D3EE">
+    <circle cx="210" cy="140" r="14"/>
+    <circle cx="340" cy="220" r="14"/>
+    <circle cx="172" cy="308" r="14"/>
+    <circle cx="302" cy="372" r="14"/>
+  </g>
+  
+  <!-- Connecting lines for the nodes -->
+  <g stroke="#22D3EE" stroke-width="6" stroke-linecap="round">
+    <line x1="256" y1="100" x2="210" y2="140" opacity="0.6"/>
+    <line x1="310" y1="180" x2="340" y2="220" opacity="0.6"/>
+    <line x1="202" y1="348" x2="172" y2="308" opacity="0.6"/>
+    <line x1="256" y1="412" x2="302" y2="372" opacity="0.6"/>
+  </g>
+</svg>
