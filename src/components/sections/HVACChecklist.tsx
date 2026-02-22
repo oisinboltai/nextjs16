@@ -112,7 +112,7 @@ export function HVACChecklist({ onGetQuote }: { onGetQuote?: () => void }) {
   const form = useForm<FormData>({
     resolver: zodResolver(schema),
     defaultValues: {
-      sqFootage: undefined as unknown as number,
+      sqFootage: 0,
       heatingFuel: "",
       goal: "",
       name: "",
