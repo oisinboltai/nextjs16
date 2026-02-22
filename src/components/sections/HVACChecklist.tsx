@@ -1,4 +1,5 @@
 "use client";
+import { type Resolver } from "react-hook-form";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -110,7 +111,7 @@ export function HVACChecklist({ onGetQuote }: { onGetQuote?: () => void }) {
   const { toast } = useToast();
 
   const form = useForm<FormData>({
-    resolver: zodResolver(schema),
+    resolver: zodResolver(schema) as Resolver<FormData>,
     defaultValues: {
       sqFootage: 0,
       heatingFuel: "",
