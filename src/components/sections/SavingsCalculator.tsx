@@ -130,7 +130,7 @@ export function SavingsCalculator() {
   const { toast } = useToast();
 
   const inputForm = useForm<InputFormData>({
-    resolver: zodResolver(inputSchema),
+    resolver: zodResolver(inputSchema) as any,
     defaultValues: {
       inputMode: "bill",
       monthlyBill: undefined,
@@ -165,7 +165,7 @@ export function SavingsCalculator() {
 
   const onCalculate = () => {
     inputForm.handleSubmit((data) => {
-      const result = computeEstimate(data);
+      const result = computeEstimate(data as InputFormData);
       setEstimate(result ?? null);
       setShowEmailForm(!!result);
       if (!result) {

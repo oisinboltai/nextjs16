@@ -118,7 +118,7 @@ export function EnergyCostReductionChart({ embedded = false }: { embedded?: bool
               contentStyle={styles.tooltip.contentStyle}
               labelStyle={embedded ? { color: "hsl(var(--muted-foreground))", marginBottom: "4px" } : { color: "#cbd5e1", marginBottom: "4px" }}
               itemStyle={styles.tooltip.itemStyle}
-              formatter={(value: number) => [`$${value}`, ""]}
+              formatter={(value: number | undefined) => [`$${value ?? 0}`, ""]}
             />
             <Legend
               verticalAlign="top"
