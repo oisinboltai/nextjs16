@@ -1,5 +1,5 @@
 "use client";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Header } from "@/components/Header";
 import { TrustSection } from "@/components/sections/TrustSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
@@ -28,7 +28,7 @@ const About = () => {
               Tell us about your home and we&apos;ll provide a tailored estimate.
             </p>
             <Button asChild size="lg">
-              <Link to="/#quote">Get a Quote</Link>
+            <Link href="/#quote">Get a Quote</Link>
             </Button>
           </div>
         </section>

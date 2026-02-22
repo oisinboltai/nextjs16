@@ -1,5 +1,6 @@
 "use client";
-import { Link, useNavigate } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import { LogisticsSection } from "@/components/sections/LogisticsSection";
 import { HVACChecklist } from "@/components/sections/HVACChecklist";
@@ -9,10 +10,10 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
 const HowItWorks = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const scrollToQuote = () => {
-    navigate("/#quote");
+    router.push("/#quote");
   };
 
   return (
@@ -53,7 +54,7 @@ const HowItWorks = () => {
               Tell us about your home and we&apos;ll provide a tailored estimate.
             </p>
             <Button asChild size="lg">
-              <Link to="/#quote">Get a Quote</Link>
+            <Link href="/#quote">Get a Quote</Link>
             </Button>
           </div>
         </section>
